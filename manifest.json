@@ -1,0 +1,30 @@
+{
+    "name": "chrome-effect",
+    "description": "make chrome more effectively",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "css": [],
+        "js": [
+            "my.js"
+        ]
+    }],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html"
+}
